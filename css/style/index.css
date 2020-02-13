@@ -1,0 +1,243 @@
+
+/* HEADER : 이희진 */
+
+.container {
+  position: relative;
+}
+.header {
+  position: fixed;
+  width: 100%;
+  height: 64px;
+  border-bottom: 1px solid #eee;
+  background:#fff;
+  z-index:100;
+}
+.header__inner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__heading,
+.open__button {
+  padding: 20px;
+  cursor: pointer;
+}
+.open__button:hover {
+  background: #eee;
+}
+.header__menu {
+  opacity: 0;
+  position: absolute;
+  top: 0;  
+  width: 100%;
+  height: 100vh;
+  right: -100%;
+  background: hsla(225, 57%, 10%, 0.9);
+  transition: all .7s;
+}
+.header__menu.active {
+  opacity: 1;
+  right: 0;
+}
+.close__button {
+  display: block;
+  height: 58px;
+  text-align: right;
+  cursor: pointer;
+  color: #fff;
+}
+.close__button i {
+  padding: 14px 10px 14px 10px;
+  font-size: 33px;
+}
+.menu__list {
+  color: #fff;
+}
+.menu__item {
+  border-bottom: 1px solid hsla(225, 57%, 30%, 0.5);
+}
+.menu__item:hover {
+  background: #2e437c;
+}
+.menu__item a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+}
+.menu__item a:focus {
+  background: #2e437c;
+}
+
+/* main  */
+/* 메인 리스트 : 윤관영 */
+
+.item__list__wrap{
+    max-width:810px;
+    width: 100%;
+    margin: 100px auto;
+}
+.item__list__wrap ul{
+  display: FLEX;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.item{
+    position: relative;
+    max-width:400px;
+    width: 100%;
+    height: 360px;
+    margin-bottom: 10px;
+    background: #eee;
+}
+.item a{
+    display: block;
+    overflow: hidden;    
+    width: 100%;
+    height: 100%;
+    padding:30px;
+    box-sizing: border-box;
+}
+.item a img {
+  transition: all .5s;
+}
+.item a:hover img {
+  transform: scale(1.1);
+}
+.item img{
+    display: block;
+    margin: 0 auto;
+    width: 270px;
+}
+.item span{
+    display: block;
+    padding:20px;
+    text-align: center;
+}
+
+/* 리스트 클릭 후 상세내용 : 허용제 */
+
+.item__info{
+  opacity: 0;
+  position: absolute;
+  top:0;
+  width:100%;
+  height:100%;
+  background: rgba(255, 255, 255, .6);
+  transition: all .6s;
+  z-index: -1;
+}
+.item__info.on {
+  opacity: 1;
+  position: absolute;
+  top:0;
+  z-index: 10;
+}
+.item__info .info__title{
+  max-height:263px;
+  padding:42px 20px 107px 20px;
+  box-sizing: border-box;
+}
+.info__title h3{
+  padding-bottom:17px;
+  margin-bottom:14px;
+  border-bottom:2px solid #202023;
+}
+.info__title h3 span{
+  padding:0;  
+  font-size: 14px;
+  line-height: 20px;
+  color: #737373;
+  text-align:left;
+}
+.info__title p{
+  font-size:16px;
+  line-height:23px;
+}
+.info__detail{
+  display:flex;  
+  justify-content: space-between;
+  position:relative;
+  padding:21px 40px;
+  background:#f8f8f8;
+
+}
+.info__detail div:nth-child(1){
+  padding-right:24px;
+  border-right:1px solid #999;
+}
+.info__wrap dl{
+  display:flex;
+  font-size:13px;
+  line-height:19px;
+}
+.info__wrap dl dt{
+  width:70px;
+  margin-right:12px;
+}
+.item__info a{
+  position: absolute;
+  top:20px;
+  right:20px; 
+  width:18px;
+  height:18px;
+  padding:15px;
+  background:url(https://raw.githubusercontent.com/Leenamkwon/mini_project/develop/images/detail-close.gif) no-repeat;
+  background-position:5px;
+}
+/* 태블릿 반응형 */
+@media screen and (max-width: 840px) {
+  .item__list__wrap{
+    max-width:710px;
+  }
+  .item{
+    max-width:350px;
+  }
+  .info__detail div:nth-child(1){
+    border:0;
+  }
+  .info__detail{
+    padding:20px;
+  }
+  .info__detail::after{
+    content: '';
+    display: inline-block;
+    position: absolute;    
+    top: 0; 
+    left: 50%;  
+    height: 50%;          
+    border-right: 1px solid #999;
+    transform: translate(50%,50%);
+  }  
+  .item__info .info__title{
+    max-height:264px;
+  }
+}
+@media screen and (max-width: 559px) {
+  .header{
+    background:#fff;
+  }
+  .item__list__wrap ul {
+    justify-content: center;
+  }
+  .item__list__wrap ul{
+    padding:10px;
+    flex-wrap: wrap;
+  }
+  .info__detail{
+    padding: 21px 20px;
+  }
+  .info__detail::after{
+    content:'';
+    display:inline-block;
+    border-right:1px solid #999; 
+  }  
+  .info__detail div:nth-child(1){
+    border:0;
+  }
+  .info__wrap dl dt{
+    width:50px;
+  }
+}
