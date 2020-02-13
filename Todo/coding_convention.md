@@ -26,17 +26,17 @@ ex: <!-— 2020-02-10 —>
 
 Attribute 우선순위
 속성 순서
-1 rel
-2 type
-3 href, src
-4 width, height
-5 target
-6 id
-7 name
-8 class
-9 style
-10 title, alt
-11 기타 attribute
+1  rel
+2  type
+3  href, src
+4  width, height
+5  target
+6  id
+7  name
+8  class
+9  style
+10  title, alt
+11  기타 attribute
 
 
 
