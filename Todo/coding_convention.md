@@ -91,4 +91,6 @@ css { display: overflow; width:1px; height:1px; text-indent:-9999px }
 WA IR (권장)
 이미지로 대체할 엘리먼트에 배경이미지를 설정하고 글자는 span 태그로 감싼 후 z-index:-1을 이용하여 화면에 안보이게 처리
 클릭 부분에는 button, a을 둘 다 사용한다.
-참고: 다음, 카카오
+
+
+참고: 다음
