@@ -8,4 +8,4 @@ Topic EDIYA COFFEE
 ### Used programming language: HTML5, CSS3, JavaScript(jQuery)
 ### Collaboration Tools Used: git&github, slack
 
-###web: <https://leenamkwon.github.io/mini_project/.>
+### web: <https://leenamkwon.github.io/mini_project/.>
