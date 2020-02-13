@@ -24,6 +24,11 @@
   padding: 20px;
   cursor: pointer;
 }
+.open__button {
+  position: absolute;
+  top:0;
+  right:0;  
+}
 .open__button:hover {
   background: #eee;
 }
