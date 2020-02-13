@@ -27,11 +27,17 @@ $(document).ready(function() {
                 $(this).parent('.item__info').removeClass('on');
                 return;
             });
-              
+            
+            // enter key
             $(document).keypress(function(event){
                 var keycode = (event.keyCode ? event.keyCode : event.which);
+                var $close = $('.header__menu');
                 if(keycode == "13") {
                     $('.header__menu').addClass('active');  
+                    if($close.hasClass('active')) {
+                        $('.info_btn').prop('tabindex', '-1');
+                        $('.menu__item > a').prop('tabindex', '0');
+                    }
                 }
             });
 });
